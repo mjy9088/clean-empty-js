@@ -2,9 +2,9 @@
   "private": true,
   "name": "clean-empty-js",
   "type": "module",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "bin": {
-    "clean-empty-js": "./dist/index.js"
+    "clean-empty-js": "./index.js"
   },
   "scripts": {
     "publish": "rimraf dist compile && tsc && mkdirp dist && cpy README.md dist && rollup -c && package-json-minifier && cd dist && npm publish"
