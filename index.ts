@@ -1,9 +1,13 @@
 import { glob } from "glob";
 import { readFile, unlink } from "node:fs/promises";
 
-const contentToRemove = `"use strict";
+const contentsToRemove = [
+  `"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-`;
+`,
+  `export {};
+`,
+];
 
 async function main() {
   const [_, __, ...patterns] = process.argv;
@@ -25,7 +29,7 @@ async function main() {
       const files = await glob(pattern);
       for (const file of files) {
         const content = await readFile(file, "utf-8");
-        if (content === contentToRemove) {
+        if (contentsToRemove.indexOf(content) !== -1) {
           await unlink(file);
           console.log(`Removed: ${file}`);
         }
