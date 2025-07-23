@@ -7,6 +7,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 `,
   `export {};
 `,
+  `#!/usr/bin/env node
+export {};
+`,
 ];
 
 async function main() {
