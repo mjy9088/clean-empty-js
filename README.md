@@ -7,7 +7,7 @@
 After running `tsc`, run the following command:
 
 ```shell
-npx clean-empty-js "dist/**/*.js"
+npx clean-empty-js "dist/**/*.js" "dist/**/*.d.ts"
 ```
 
 This will remove JavaScript files without meaningful content, keeping your build directory clean.
