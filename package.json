@@ -2,12 +2,12 @@
   "private": true,
   "name": "clean-empty-js",
   "type": "module",
-  "version": "2.0.3",
+  "version": "2.0.5",
   "bin": {
-    "clean-empty-js": "./index.js"
+    "clean-empty-js": "./index.cjs"
   },
   "scripts": {
-    "publish": "rimraf dist compile && tsc && mkdirp dist && cpy README.md dist && rollup -c && package-json-minifier && cd dist && npm publish"
+    "build": "rimraf dist compile && tsc && mkdirp dist && cpy README.md dist && rollup -c && package-json-minifier"
   },
   "author": "Juyeong Maing <mjy9088@naver.com>",
   "repository": {
@@ -23,7 +23,7 @@
     "@types/node": "^20.0.0",
     "cpy-cli": "^5.0.0",
     "mkdirp": "^3.0.1",
-    "package.json-minifier": "^0.0.4",
+    "package.json-minifier": "^0.0.6",
     "rimraf": "^6.0.1",
     "rollup": "^4.21.1",
     "rollup-plugin-shebang-bin": "^0.0.7",

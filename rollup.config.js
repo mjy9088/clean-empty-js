@@ -4,7 +4,7 @@ import shebang from 'rollup-plugin-shebang-bin';
 export default {
   input: 'compile/index.js',
   output: {
-    dir: 'dist',
+    file: 'dist/index.cjs',
     format: 'cjs',
   },
   plugins: [
